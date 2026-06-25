@@ -9,9 +9,14 @@ window.addEventListener("load", fetchEpisodes);
 document
   .querySelector("#search-toggle")
   .addEventListener("click", toggleSearchBar);
-document
-  .querySelector("#search-input")
-  .addEventListener("input", searchEpisodes);
+document.querySelector("#search-input").addEventListener("input", handleSearch);
+
+const DEV_MODE = 0;
+const API_URL =
+  "https://raw.githubusercontent.com/2gbeh/src/main/event-driven-programming";
+const APP_URL = DEV_MODE
+  ? "../../northwind-ai/client/public"
+  : "https://northwindai.org";
 
 class Episode {
   id; // 20
@@ -70,7 +75,7 @@ async function fetchEpisodes() {
     if (DEV_MODE) {
       collection = [...MOCK_DATA];
     } else {
-      const res = await fetch(`${API_URL}/episodes`);
+      const res = await fetch(`${API_URL}/data.json`);
       const data = await res.json();
       collection = data;
     }
@@ -88,7 +93,7 @@ function toggleSearchBar() {
   !isHidden && renderEpisodes(collection); // reset list
 }
 
-function searchEpisodes(event) {
+function handleSearch(event) {
   const value = event.target.value.trim();
   const regex = new RegExp(value, "i"); // case-insensitive
 

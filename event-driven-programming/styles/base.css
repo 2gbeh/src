@@ -9,9 +9,11 @@ body {
   color: #e9edef;
   margin: 0 auto;
   max-width: 480px;
+  height: 100vh;
   font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 @media (max-width: 480px) {
   body {
@@ -61,16 +63,18 @@ header .right-content svg {
 }
 
 main {
-  min-height: 80vh;
+  min-height: 0;
   flex: 1;
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
   overflow-y: auto;
 }
 main .empty-content {
   color: #8696a0;
-  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 main .empty-content svg {
   width: 48px;
