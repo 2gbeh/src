@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #111b21;
+  color: #e9edef;
+  margin: 0 auto;
+  max-width: 480px;
+  font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 480px) {
+  body {
+    max-width: 100%;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+header .content {
+  padding: 0 16px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .left-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+header .left-content h1 {
+  color: #e9edef;
+  margin-top: -8px;
+  font-size: 22px;
+  font-weight: 600;
+}
+header .right-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+header .right-content svg {
+  width: 22px;
+  height: 22px;
+  fill: #aebac1;
+  cursor: pointer;
+}
+
+main {
+  min-height: 80vh;
+  flex: 1;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  overflow-y: auto;
+}
+main .empty-content {
+  color: #8696a0;
+  text-align: center;
+}
+main .empty-content svg {
+  width: 48px;
+  height: 48px;
+}
+
+footer .content {
+  border-top: 1px solid #1f2c33;
+  padding: 10px 0 20px;
+  display: flex;
+  justify-content: space-around;
+}
+footer .content a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  position: relative;
+}
+footer .content svg {
+  width: 24px;
+  height: 24px;
+  fill: #8696a0;
+}
+footer .active svg {
+  fill: #00a884;
+}
+footer .content small {
+  font-size: 12px;
+  color: #8696a0;
+}
+footer .active small {
+  color: #00a884;
+}

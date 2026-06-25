@@ -1,0 +1,9 @@
+.debug {
+  border: 1px solid red;
+}
+
+.sticky {
+  background: #111b21;
+  position: sticky;
+  z-index: 9;
+}
