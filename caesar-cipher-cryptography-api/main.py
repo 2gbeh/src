@@ -28,13 +28,13 @@ class RequestDto(BaseModel):
 def caesar_cipher(payload:RequestDto, decrypt: bool = False) -> str:
     shift = -payload.shift if decrypt else payload.shift
     result = ""
-    
+
     for character in payload.message:
-        if ord(character) in ASCII:
-            mock_index = ord(character) - 32 + shift  # 32–126 as 0–94
+        if ord(character) in ASCII: # 32 <= ord(character) <= 126
+            mock_index = ord(character) - 32 + shift  # 32–126 >> 0–94
             real_index = (mock_index % 95) + 32
             result += chr(real_index)
-    
+
     return result
 
 app = FastAPI()
@@ -50,4 +50,6 @@ def decrypt(body: RequestDto):
     # Ex. body.message = "~30J<@4.6J-=:B9J1:CJ5@8;>J:A0=J?30J7,EDJ/:2"
     data = caesar_cipher(body, decrypt=True)
     return { "data": data}
+
+
 
