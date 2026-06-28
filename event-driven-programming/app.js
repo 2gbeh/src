@@ -72,13 +72,8 @@ let collection = [];
 
 async function fetchEpisodes() {
   try {
-    if (DEV_MODE) {
-      collection = [...MOCK_DATA];
-    } else {
-      const res = await fetch(`${API_URL}/data.json`);
-      const data = await res.json();
-      collection = data;
-    }
+    const res = await fetch(`${API_URL}/data.json`);
+    const collection = await res.json();
     renderEpisodes(collection);
   } catch (err) {
     console.error(err);
@@ -88,6 +83,7 @@ async function fetchEpisodes() {
 function toggleSearchBar() {
   const target = document.querySelector(".search-container");
   const isHidden = target.style.display === "none";
+
   target.style.display = isHidden ? "block" : "none";
   document.querySelector("#search-input").value = ""; // reset input
   !isHidden && renderEpisodes(collection); // reset list
@@ -109,7 +105,7 @@ function handleSearch(event) {
 }
 
 function renderEpisodes(episodes) {
-  console.log("🚀 ~ renderEpisodes ~ episodes:", episodes);
+  // console.log("🚀 ~ renderEpisodes ~ episodes:", episodes);
   let listItems = "";
 
   episodes.forEach((episode) => {

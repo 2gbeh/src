@@ -34,6 +34,7 @@ export function useGetEpisodesQuery() {
 
   const fetcher = async () => {
     setQuery((prev) => ({ ...prev, loading: true, error: "" }));
+
     try {
       const res = await fetch(`${API_URL}/episodes`);
       const episodes: IEpisode[] = await res.json();
@@ -47,6 +48,7 @@ export function useGetEpisodesQuery() {
             return { ...episode, guest };
           },
         );
+        
         const data = await Promise.all(transformedEpisodes);
         setQuery((prev) => ({ ...prev, data }));
       } else {

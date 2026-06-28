@@ -32,7 +32,7 @@ def caesar_cipher(payload:RequestDto, decrypt: bool = False) -> str:
     for character in payload.message:
         if ord(character) in ASCII: # 32 <= ord(character) <= 126
             mock_index = ord(character) - 32 + shift  # 32–126 >> 0–94
-            real_index = (mock_index % 95) + 32
+            real_index = (mock_index % 95) + 32  # 0–94 >> 32–126
             result += chr(real_index)
 
     return result
@@ -42,14 +42,12 @@ app = FastAPI()
 @app.post("/api/encrypt")
 def encrypt(body: RequestDto):
     # Ex. body.message = "The quick brown fox jumps over the lazy dog"
-    data = caesar_cipher(body)
-    return { "data": data }
+    return { "cipher_text": caesar_cipher(body) }
 
 @app.post("/api/decrypt")
 def decrypt(body: RequestDto):
     # Ex. body.message = "~30J<@4.6J-=:B9J1:CJ5@8;>J:A0=J?30J7,EDJ/:2"
-    data = caesar_cipher(body, decrypt=True)
-    return { "data": data}
+    return { "plain_text": caesar_cipher(body, decrypt=True) }
 
 
 

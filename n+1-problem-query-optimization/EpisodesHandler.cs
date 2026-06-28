@@ -17,7 +17,9 @@ using System.Threading.Tasks;
 namespace NorthwindAI.Podcast.Episodes
 {
   public enum EpisodeStatus { Queued, Published }
+
   public record EpisodeDto(int Id, string Topic, string Datetime, Guest Guest);
+
   public class EpisodesHandler(IRepository<Episode, long> episodeRepo) : IEpisodesHandler
   {
     public async Task<List<EpisodeDto>> GetAllAsync()
