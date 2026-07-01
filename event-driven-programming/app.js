@@ -40,7 +40,7 @@ class Episode {
     const dateObj = new Date(this.datetime);
     const day = dateObj.getDate(); // 1-31
     const monthIndex = dateObj.getMonth(); // 0-11
-    const monthNamesShort = [
+    const monthNames = [
       "Jan",
       "Feb",
       "Mar",
@@ -55,7 +55,7 @@ class Episode {
       "Dec",
     ];
 
-    return `${monthNamesShort[monthIndex]} ${day}`;
+    return `${monthNames[monthIndex]} ${day}`;
   }
 
   get toStrSpeakers() {
