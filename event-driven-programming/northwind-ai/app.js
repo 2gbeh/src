@@ -13,9 +13,9 @@ document.querySelector("#search-input").addEventListener("input", handleSearch);
 
 const DEV_MODE = 0;
 const API_URL =
-  "https://raw.githubusercontent.com/2gbeh/src/main/event-driven-programming";
+  "https://raw.githubusercontent.com/2gbeh/src/main/event-driven-programming/northwind-ai";
 const APP_URL = DEV_MODE
-  ? "../../northwind-ai/client/public"
+  ? "../../../northwind-ai/client/public"
   : "https://northwindai.org";
 
 class Episode {

@@ -11,14 +11,16 @@
     "datetime": "2026-07-12T19:00:00.000Z",
     "thumbnail": "/uploads/podcast/avatar-fike.png",
     "topic": "Empirical Analysis & Decision Making",
-    "speakers": ["Franklin Ike"]
+    "speakers": ["Franklin Ike"],
+    "virtualLink": "https://x.com/i/spaces/1yGBeeAYNgMKN"
   },
   {
     "id": 21,
     "datetime": "2026-07-05T19:00:00.000Z",
     "thumbnail": "/uploads/logos/lani.jpg",
-    "topic": "LANI Design Session",
-    "speakers": ["Jabulani Usen"]
+    "topic": "LANI App Design Session",
+    "speakers": ["Jabulani Usen"],
+    "virtualLink": "https://x.com/i/spaces/1dGYllAbQAoKX"
   },
   {
     "id": 19,
