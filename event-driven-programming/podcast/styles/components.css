@@ -30,16 +30,13 @@
 }
 
 /* TABS */
-.tabs {
+.tabs ul{
   margin-top: 2px;
   padding: 0 16px 8px;
   display: flex;
   gap: 10px;
   overflow-x: auto;
   scrollbar-width: none;
-}
-.tabs::-webkit-scrollbar {
-  display: none;
 }
 .tabs ul > li {
   color: #aebac1;

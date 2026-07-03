@@ -11,12 +11,9 @@ document
   .addEventListener("click", toggleSearchBar);
 document.querySelector("#search-input").addEventListener("input", handleSearch);
 
-const DEV_MODE = 0;
 const API_URL =
   "https://raw.githubusercontent.com/2gbeh/src/main/event-driven-programming/podcast";
-const APP_URL = DEV_MODE
-  ? "../../../northwind-ai/client/public"
-  : "https://northwindai.org";
+const APP_URL = "https://northwindai.org";
 
 class Episode {
   id; // 20
@@ -73,7 +70,7 @@ let collection = [];
 async function fetchEpisodes() {
   try {
     const res = await fetch(`${API_URL}/data.json`);
-    const collection = await res.json();
+    collection = await res.json();
     renderEpisodes(collection);
   } catch (err) {
     console.error(err);

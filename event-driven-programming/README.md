@@ -2,6 +2,8 @@
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES2017-F7DF1E.svg)
 
+> [Open JavaScript Online Interpreter](https://onecompiler.com/javascript)
+
 ## Section 1 > JavaScript Fundamentals > Variables & Constants
 
 #### Example 1
@@ -62,7 +64,27 @@ console.log(jambScores, totalScore, sortedScoresAsc, sortedScoresDesc);
 #### Example 2
 
 ```js
+// TODO: Process Jamb Scores
+const jambScores = { ENG: 56, MAT: 42, PHY: 55, ECO: 60 };
+var size = Object.keys(jambScores).length; // 4
+var english = jambScores["ENG"]; // 56 (index-notation)
+var economics = jambScores.ECO; // 60 (dot-notation preferred)
 
+jambScores.PHY = 71; // {ENG: 56, MAT: 42, PHY: 71, ECO: 60}
+jambScores.CHE = 35; // {ENG: 56, MAT: 42, PHY: 71, ECO: 60, CHE: 35}
+delete jambScores.CHE; // {ENG: 56, MAT: 42, PHY: 71, ECO: 60}
+
+var wroteChemistry = Object.keys(jambScores).includes("CHE"); // god forbid!
+var scored_56 = Object.values(jambScores).includes(56); // true
+var totalScore = Object.values(jambScores).reduce(
+  (total, value) => total + value,
+  0
+); // 229
+var minScore = Math.min(...Object.values(jambScores)); // 42
+var maxScore = Math.max(...Object.values(jambScores)); // 71
+var verifyDatatype = typeof jambScores === "object"; // true
+
+console.log(jambScores, totalScore, wroteChemistry, verifyDatatype);
 ```
 
 #### Example 3
@@ -98,5 +120,6 @@ const minutes_f = minuteIndex.toString().padStart(2, "0"); // 00-59
 const date_f = `${days[dayOfWeekIndex]}, ${dayOfMonth} ${months[monthIndex]} ${year}`;
 const time_f = `${hours_f}:${minutes_f} ${meridiem}`;
 const output = `${date_f} | ${time_f}`;
-console.log(output);
+
+console.log(dateObj.toString(), output);
 ```
