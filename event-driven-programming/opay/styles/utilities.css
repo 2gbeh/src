@@ -1,0 +1,22 @@
+.debug {
+  border: 1px solid red;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 14px 0;
+}
+
+.spacer {
+  flex: 1;
+}

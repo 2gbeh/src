@@ -1,11 +1,10 @@
 /**
- * Event Driven Programming Pt.2
+ * Event-Driven Programming Pt.2 (OPay)
  *
  * @author Northwind AI <northwindai.org>
  * @date 2026-07-08
  */
 
-window.addEventListener("load", fetchEpisodes);
 document
   .querySelector("#search-toggle")
   .addEventListener("click", toggleSearchBar);
