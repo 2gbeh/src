@@ -1,35 +1,30 @@
 /**
- * Event-Driven Programming Pt.1 (Podcast)
+ * Event-Driven Programming Pt.2 (Podcast)
  *
  * @author Northwind AI <northwindai.org>
- * @date 2026-07-01
+ * @date 2026-07-08
  */
 
 window.addEventListener("load", fetchEpisodes);
+
 document
   .querySelector("#search-toggle")
   .addEventListener("click", toggleSearchBar);
-document.querySelector("#search-input").addEventListener("input", handleSearch);
+  
+document.querySelector("#search-input").addEventListener("input", handleSearchInput);
 
 const API_URL =
   "https://raw.githubusercontent.com/2gbeh/src/main/event-driven-programming/podcast";
 const APP_URL = "https://northwindai.org";
 
 class Episode {
-  id; // 20
-  datetime; // 2026-07-08T09:00:00.000Z
-  thumbnail; // /uploads/logos/oau.jpg
-  topic; // Event-Driven Programming Pt.2
-  speakers; // ["Emanuel"]
-  virtualLink; // https://youtu.be/dhMPSzedWNQ"
-
   constructor(episode) {
-    this.id = episode?.id || -1;
-    this.datetime = episode?.datetime || "1970-01-01T00:00:00.000Z";
-    this.thumbnail = episode?.thumbnail || null;
-    this.topic = episode?.topic || "---";
-    this.speakers = episode?.speakers || [];
-    this.virtualLink = episode?.virtualLink || "#";
+    this.id = episode?.id || -1; // 20
+    this.datetime = episode?.datetime || "1970-01-01T00:00:00.000Z"; // 2026-07-08T09:00:00.000Z
+    this.thumbnail = episode?.thumbnail || null; // /uploads/logos/oau.jpg
+    this.topic = episode?.topic || "---"; // Event-Driven Programming Pt.2
+    this.speakers = episode?.speakers || []; // ["Emanuel"]
+    this.virtualLink = episode?.virtualLink || "#"; // https://youtu.be/cGoyAmGwDog"
   }
 
   /** @returns {string} ~ "Jul 8" */
@@ -86,7 +81,7 @@ function toggleSearchBar() {
   !isHidden && renderEpisodes(collection); // reset list
 }
 
-function handleSearch(event) {
+function handleSearchInput(event) {
   const value = event.target.value.trim();
   const regex = new RegExp(value, "i"); // case-insensitive
 

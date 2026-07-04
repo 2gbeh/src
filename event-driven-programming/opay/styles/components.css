@@ -73,18 +73,35 @@
 .amount-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  margin-bottom: 16px;
 }
 
-.amount-value {
+.amount-row input {
+  font-size: 15px;
+  color: var(--text);
+  padding: 0 10px;
+  height: 44px;
+  font-size: 24px;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  outline: none;
+  width: 100%;
+}
+.amount-row input:focus {
+  border-color: var(--green);
+}
+
+.amount-currency {
   font-size: 32px;
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.5px;
+  line-height: 0;
 }
 
 .clear-btn {
   width: 28px;
+  min-width: 28px;
   height: 28px;
   border-radius: 50%;
   background: var(--chip-bg);
@@ -98,7 +115,7 @@
 }
 
 /* QUICK AMOUNTS */
-.quick-amounts {
+.amount-toggle {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
@@ -135,13 +152,20 @@ section.remark-card {
   font-size: 14px;
   color: var(--subtext);
   font-weight: 500;
-  margin-bottom: 6px;
 }
 
 .remark-value {
   font-size: 15px;
   color: var(--text);
+  height: 44px;
   margin-bottom: 14px;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  outline: none;
+  width: 100%;
+}
+.remark-value:focus {
+  border-color: var(--green);
 }
 
 .remark-toggle {
@@ -151,17 +175,14 @@ section.remark-card {
 }
 
 .remark-toggle button {
+  background: var(--chip-bg);
+  color: var(--text);
   padding: 14px;
   border-radius: var(--radius-sm);
   border: none;
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
-}
-
-.remark-toggle .inactive {
-  background: var(--chip-bg);
-  color: var(--text);
 }
 
 .remark-toggle .active {
@@ -173,12 +194,16 @@ section.remark-card {
 .confirm-btn {
   width: 100%;
   padding: 18px;
-  background: var(--green-disabled);
   color: #fff;
+  background: var(--green);
   font-size: 17px;
   font-weight: 600;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   letter-spacing: 0.2px;
+}
+
+.confirm-btn:disabled {
+  background: var(--green-disabled);
 }

@@ -26,12 +26,13 @@ console.log(grade, passed, remarks);
 var birthYear = 1952; // BAT
 const thisYear = new Date().getFullYear(); // 2026
 const age = thisYear - birthYear; // 74
-const canVote = age >= 18 ? "Sure" : "Nope";
+const canVote = age >= 18; // true
+const remarks = canVote ? "Get Your PVC!" : "Pray For Nigeria!";
 
-console.log(thisYear, age, canVote);
+console.log(thisYear, age, canVote, remarks);
 ```
 
-## ## Section 1 > JavaScript Fundamentals > Data Types
+## Section 1 > JavaScript Fundamentals > Data Types
 
 #### Example 1
 
@@ -67,8 +68,8 @@ console.log(jambScores, totalScore, sortedScoresAsc, sortedScoresDesc);
 // TODO: Process Jamb Scores
 const jambScores = { ENG: 56, MAT: 42, PHY: 55, ECO: 60 };
 var size = Object.keys(jambScores).length; // 4
-var english = jambScores["ENG"]; // 56 (index-notation)
-var economics = jambScores.ECO; // 60 (dot-notation preferred)
+var english = jambScores.ENG; // 56 (dot-notation preferred)
+var economics = jambScores["ECO"]; // 60 (index-notation dynamic)
 
 jambScores.PHY = 71; // {ENG: 56, MAT: 42, PHY: 71, ECO: 60}
 jambScores.CHE = 35; // {ENG: 56, MAT: 42, PHY: 71, ECO: 60, CHE: 35}
@@ -90,11 +91,11 @@ console.log(jambScores, totalScore, wroteChemistry, verifyDatatype);
 #### Example 3
 
 ```js
-// TODO: Format datetime as Sun, 8 Jul 2026 | 10:00 AM
+// TODO: Format datetime as Tue, 20 Oct 2020 | 3:00 PM
 const dateObj = new Date("2020-10-20 15:00:00"); // #EndSARS Protest
-const dayOfWeekIndex = dateObj.getDay(); // 0-6
+const dayOfWeekIndex = dateObj.getDay(); // 0-6 >> Sun-Sat
 const dayOfMonth = dateObj.getDate(); // 1-31
-const monthIndex = dateObj.getMonth(); // 0-11
+const monthIndex = dateObj.getMonth(); // 0-11 >> Jan-Dec
 const year = dateObj.getFullYear(); // 2026
 const hourIndex = dateObj.getHours(); // 0-23
 const minuteIndex = dateObj.getMinutes(); // 0-59
@@ -122,4 +123,15 @@ const time_f = `${hours_f}:${minutes_f} ${meridiem}`;
 const output = `${date_f} | ${time_f}`;
 
 console.log(dateObj.toString(), output);
+```
+
+## Section 1 > JavaScript Fundamentals > Classes (OOP)
+
+#### Example 1
+
+```js
+// TODO: Model Person Entity
+class Student {
+  
+}
 ```
