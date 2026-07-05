@@ -34,7 +34,7 @@ console.log(thisYear, age, canVote, remarks);
 
 ## Section 1 > JavaScript Fundamentals > Data Types
 
-#### Example 1
+#### Array Example
 
 ```js
 // TODO: Process Jamb Scores
@@ -62,7 +62,7 @@ var verifyDatatype = Array.isArray(jambScores); // true
 console.log(jambScores, totalScore, sortedScoresAsc, sortedScoresDesc);
 ```
 
-#### Example 2
+#### Object Example
 
 ```js
 // TODO: Process Jamb Scores
@@ -88,7 +88,7 @@ var verifyDatatype = typeof jambScores === "object"; // true
 console.log(jambScores, totalScore, wroteChemistry, verifyDatatype);
 ```
 
-#### Example 3
+#### Date Example
 
 ```js
 // TODO: Format datetime as Tue, 20 Oct 2020 | 3:00 PM
@@ -96,7 +96,7 @@ const dateObj = new Date("2020-10-20 15:00:00"); // #EndSARS Protest
 const dayOfWeekIndex = dateObj.getDay(); // 0-6 >> Sun-Sat
 const dayOfMonth = dateObj.getDate(); // 1-31
 const monthIndex = dateObj.getMonth(); // 0-11 >> Jan-Dec
-const year = dateObj.getFullYear(); // 2026
+const year = dateObj.getFullYear(); // YYYY
 const hourIndex = dateObj.getHours(); // 0-23
 const minuteIndex = dateObj.getMinutes(); // 0-59
 
@@ -125,6 +125,64 @@ const output = `${date_f} | ${time_f}`;
 console.log(dateObj.toString(), output);
 ```
 
+## Section 1 > JavaScript Fundamentals > Functions
+
+#### Example 1
+
+```js
+// TODO: Format Date
+function formatDate(dateParam) {
+  const dateObj = dateParam ? new Date(dateParam) : new Date();
+  const dayOfWeekIndex = dateObj.getDay(); // 0-6 >> Sun-Sat
+  const dayOfMonth = dateObj.getDate(); // 1-31
+  const monthIndex = dateObj.getMonth(); // 0-11  >> Jan-Dec
+  const year = dateObj.getFullYear(); // YYYY
+
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  return `${days[dayOfWeekIndex]}, ${dayOfMonth} ${months[monthIndex]} ${year}`;
+}
+
+const today = formatDate(); // Wed, 8 Jul 2026
+const endSars = formatDate("2020-10-20"); // Tue, 20 Oct 2020
+console.log(today, endSars);
+```
+
+#### Example 2
+
+```js
+// TODO: Format Time
+function formatTime(timeParam) {
+  const dateObj = timeParam ? new Date(timeParam) : new Date();
+  const hourIndex = dateObj.getHours(); // 0-23
+  const minuteIndex = dateObj.getMinutes(); // 0-59
+
+  const meridiem = hourIndex < 12 ? "AM" : "PM";
+  const hoursText = hourIndex % 12 || 12; // 1-12
+  const minutesText = minuteIndex.toString().padStart(2, "0"); // 00-59
+
+  return `${hoursText}:${minutesText} ${meridiem}`;
+}
+
+const systemTime = formatTime(); // 10:00 AM
+const userTime = formatTime("1992-09-15 15:09:00"); // 3:09 PM
+console.log(systemTime, userTime);
+```
+
 ## Section 1 > JavaScript Fundamentals > Classes (OOP)
 
 #### Example 1
@@ -132,6 +190,148 @@ console.log(dateObj.toString(), output);
 ```js
 // TODO: Model Person Entity
 class Student {
-  
+  constructor(record) {
+    this.surname = record?.surname || "";
+    this.otherNames = record?.otherNames || "";
+    this.gender = record?.gender || "";
+    this.matricNumber = record?.matricNumber || "";
+  }
+
+  get fullName() {
+    return `${this.surname}, ${this.otherNames}`;
+  }
+
+  registerCourse(courseCode) {}
+  checkResult(courseCode) {}
 }
+
+const record = {
+  surname: "Tugbeh",
+  otherNames: "Emmanuel Osaretin",
+  gender: "Male",
+  matricNumber: "BAS/CSC/100157",
+};
+
+const student = new Student(record);
+console.log(student.fullName);
+// Tugbeh, Emmanuel Osaretin
+```
+
+#### Example 2
+
+```js
+// TODO: Model Animal Entity
+class Fish {
+  constructor(records = []) {
+    this.collection = records;
+  }
+
+  get report() {
+    var totalOrders = this.collection.length;
+    totalOrders = `Orders Fulfilled: ${totalOrders}`;
+
+    const fn = (tot, val) => tot + val.price * val.qty;
+    var totalSales = this.collection.reduce(fn, 0);
+    totalSales = totalSales.toLocaleString();
+
+    return `${totalOrders} | Total Sales: N${totalSales}`;
+  }
+
+  add(type, price, qty = 1) {
+    this.collection.push({ type, price, qty });
+  }
+
+  remove(fishId) {
+    const index = fishId - 1;
+    this.collection.splice(index, 1);
+  }
+}
+
+const fish = new Fish();
+fish.add("Titus/Mackerel", 4500);
+fish.add("Catfish", 3000);
+fish.add("Stockfish/Okporoko", 250, 4); // 1k
+fish.add("Dried Asa Fish", 3000);
+fish.add("Smoked Catfish", 5000);
+fish.remove(3);
+
+console.log(fish.report);
+// Orders Fulfilled: 4 | Total Sales: N15,500
+```
+
+#### Example 3
+
+```js
+// TODO: Model Place Entity
+class Hotel {
+  constructor(record) {
+    this.name = record?.name || "";
+    this.address = record?.address || "";
+    this.contactInfo = record?.contactInfo || "";
+    this.priceList = record?.priceList || [];
+  }
+
+  get priceRange() {
+    const minPrice = Math.min(...this.priceList); // 50000
+    const maxPrice = Math.max(...this.priceList);
+    const minPriceText = minPrice.toLocaleString(); // 50,000
+    const maxPriceText = maxPrice.toLocaleString();
+
+    return `Between N${minPriceText} - N${maxPriceText}`;
+  }
+
+  registerGuest(guestInfo) {}
+  checkIn(guestId, roomNumber) {}
+  checkOut(guestId) {}
+  placeOrder(guestId, orderInfo) {}
+}
+
+const record = {
+  name: "Wesley Hotel",
+  address: "GRA, Benin",
+  contactInfo: "+2348169960927",
+  priceList: [50000, 100000, 150000, 200000, 250000],
+};
+
+const hotel = new Hotel(record);
+console.log(hotel.priceRange);
+// Between N50,000 - N250,000
+```
+
+#### Example 4
+
+```js
+// TODO: Model Thing Entity
+class POS {
+  constructor(record) {
+    this.cardNumber = record?.cardNumber || ""; // 16-digit
+    this.expiryDate = record?.expiryDate || ""; // MM/YY
+    this.cvv = record?.cvv || ""; // ***
+  }
+
+  get isValidCard() {
+    const [MM, YY] = this.expiryDate.split("/");
+    const expiryDateObj = new Date(`20${YY}-${MM}-01`);
+    const expiryDateOK = expiryDateObj.getTime() > Date.now();
+    const cardNumberOK = this.cardNumber.length === 3;
+    const cvvOK = this.cvv.length === 3;
+
+    return cardNumberOK && expiryDateOK && cvvOK;
+  }
+
+  checkBalance() {}
+  transfer(accountNo, bankName, amount) {}
+  withdraw(amount) {}
+  confirmTransaction(pin) {}
+}
+
+const record = {
+  cardNumber: "0002 3481 6996 0927",
+  expiryDate: "09/26",
+  cvv: "015", // Card Verification Value
+};
+
+const pos = new POS(record);
+console.log(pos.isValidCard);
+// true
 ```

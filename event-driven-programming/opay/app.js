@@ -18,6 +18,7 @@ document.querySelector("#remark").addEventListener("input", handleRemarkInput);
 document.querySelectorAll(".remark-toggle > button").forEach((element) => {
   element.addEventListener("click", handleRemarkToggle);
 });
+
 document
   .querySelector("#confirm-btn")
   .addEventListener("click", handleConfirmBtn);
