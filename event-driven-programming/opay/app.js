@@ -58,6 +58,7 @@ function renderAmount(amount) {
     document.querySelector("#confirm-btn").removeAttribute("disabled");
   } else {
     document.querySelector("#amount").value = "";
+    document.querySelector("#remark").value = "";
     document.querySelector("#confirm-btn").setAttribute("disabled", true);
   }
 }
@@ -101,5 +102,6 @@ function handleRemarkToggle(event) {
 function handleConfirmBtn() {
   if (confirm("Confirm Transfer?")) {
     alert(transferObj.narration());
+    handleClearBtn();
   }
 }
