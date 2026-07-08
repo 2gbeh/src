@@ -31,7 +31,7 @@ class Transfer {
   }
 
   get toStrAmount() {
-    const locales = "en-NG";
+    const locales = "en";
     const options = {
       minimumFractionDigits: 2,
       style: "currency",

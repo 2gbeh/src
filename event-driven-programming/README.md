@@ -4,7 +4,7 @@
 
 > [Open JavaScript Online Interpreter](https://onecompiler.com/javascript)
 
-## Section 1 > JavaScript Fundamentals > Variables & Constants
+## Section 1 > JavaScript Fundamentals > 1.1 Variables & Constants
 
 #### Example 1
 
@@ -32,7 +32,7 @@ const remarks = canVote ? "Get Your PVC!" : "Pray For Nigeria!";
 console.log(thisYear, age, canVote, remarks);
 ```
 
-## Section 1 > JavaScript Fundamentals > Data Types
+## Section 1 > JavaScript Fundamentals > 1.2 Data Types
 
 #### Array Example
 
@@ -125,7 +125,138 @@ const output = `${date_f} | ${time_f}`;
 console.log(dateObj.toString(), output);
 ```
 
-## Section 1 > JavaScript Fundamentals > Functions
+## Section 1 > JavaScript Fundamentals > 1.4 Control Flows
+
+### Section 1 > JavaScript Fundamentals > 1.4 Control Flows > Conditional Statements
+
+#### "if, else" Statement
+
+```js
+// TODO: Evaluate Jamb Score
+var input = prompt("Enter Jamb Score:");
+input = parseInt(input);
+
+if (input >= 200) {
+  alert("Passed!");
+} else {
+  alert("Failed!");
+}
+```
+
+#### "else if" Statement
+
+```js
+// TODO: Evaluate CGPA
+var input = prompt("Enter CGPA:");
+input = parseFloat(input);
+
+if (input >= 4.5 && input <= 5) {
+  alert("First Class!");
+} else if (input >= 3.5 && input <= 4.49) {
+  alert("Second Class Upper!");
+} else if (input >= 2.5 && input <= 3.49) {
+  alert("Second Class Lower!");
+} else if (input >= 1.5 && input <= 2.49) {
+  alert("Third Class!");
+} else if (input >= 1 && input <= 1.49) {
+  alert("Pass!");
+} else {
+  alert("Haba!");
+}
+```
+
+#### "switch" Statement
+
+```js
+// TODO: Language Translator
+var input = prompt("Enter time of day:");
+input = input.trim().toLowerCase();
+
+switch (input) {
+  case "morning":
+    alert("Ẹ káàárọ̀!");
+    break;
+  case "afternoon":
+    alert("Ẹ káàsán!");
+    break;
+  case "evening":
+    alert("Ẹ kúùrọ̀lẹ́!");
+    break;
+  case "night":
+    alert("Ẹ káalẹ́!");
+    break;
+  default: // Good day
+    alert("Ẹ kú ọjọ́ rere!");
+}
+```
+
+### Section 1 > JavaScript Fundamentals > 1.4 Control Flows > Repetitive Statements
+
+#### "for" Loop
+
+```js
+// TODO: Compute Even & Odd Numbers
+const even = [];
+const odd = [];
+
+for (let i = 1; i <= 10; i++) {
+  i % 2 ? odd.push(i) : even.push(i);
+}
+
+console.log(even.toString()); // 2,4,6,8,10
+console.log(odd.toString()); // 1,3,5,7,9
+```
+
+#### "for in/of" Loop
+
+```js
+// TODO: Iterate Array Indices & Elements
+const jambScores = [56, 42, 55, 55];
+
+for (let index in jambScores) {
+  console.log(index); // 0,1,2,3
+}
+
+for (let element of jambScores) {
+  console.log(element); // 56,42,55,55
+}
+```
+
+#### "while" Loop
+
+```js
+// TODO: Compute Even & Odd Numbers
+const even = [];
+const odd = [];
+
+let i = 1;
+while (i <= 10) {
+  i % 2 ? odd.push(i) : even.push(i);
+  i++;
+}
+
+console.log(even.toString()); // 2,4,6,8,10
+console.log(odd.toString()); // 1,3,5,7,9
+```
+
+#### "do, while" Loop
+
+```js
+// TODO: Compute Even & Odd Numbers
+const even = [];
+const odd = [];
+
+let i = 1;
+do {
+  i % 2 ? odd.push(i) : even.push(i);
+  i++;
+} while (i <= 10);
+
+console.log(even.toString()); // 2,4,6,8,10
+console.log(odd.toString()); // 1,3,5,7,9
+```
+
+## Section 1 > JavaScript Fundamentals > 1.5 Functions
 
 #### Example 1
 
@@ -183,7 +314,43 @@ const userTime = formatTime("1992-09-15 15:09:00"); // 3:09 PM
 console.log(systemTime, userTime);
 ```
 
-## Section 1 > JavaScript Fundamentals > Classes (OOP)
+#### Example 3
+
+```js
+// TODO: Format Number
+function formatNumber(val = 0, as = "default") {
+  var output = "";
+
+  switch (as) {
+    case "currency":
+      var locales = "en-NG";
+      var options = {
+        style: "currency",
+        currency: "NGN",
+        minimumFractionDigits: 2,
+      };
+      output = Intl.NumberFormat(locales, options).format(val);
+      break;
+    case "social":
+      var locales = "en";
+      var options = {
+        notation: "compact",
+      };
+      output = Intl.NumberFormat(locales, options).format(val);
+      break;
+    default:
+      output = val.toLocaleString();
+  }
+
+  return output;
+}
+
+console.log(formatNumber(1759)); // 1,759
+console.log(formatNumber(1759, "currency")); // ₦1,759.00
+console.log(formatNumber(1759, "social")); // 1.8k
+```
+
+## Section 1 > JavaScript Fundamentals > 1.6 Classes (OOP)
 
 #### Example 1
 
@@ -206,15 +373,15 @@ class Student {
 }
 
 const record = {
-  surname: "Tugbeh",
-  otherNames: "Emmanuel Osaretin",
-  gender: "Male",
-  matricNumber: "BAS/CSC/100157",
+  surname: "Akinyuwa",
+  otherNames: "Susan Busola",
+  gender: "Female",
+  matricNumber: "IPH/2018/001",
 };
 
 const student = new Student(record);
 console.log(student.fullName);
-// Tugbeh, Emmanuel Osaretin
+// Akinyuwa, Susan Busola
 ```
 
 #### Example 2
@@ -334,4 +501,44 @@ const record = {
 const pos = new POS(record);
 console.log(pos.isValidCard);
 // true
+```
+
+#### Example 5
+
+```js
+// TODO: Format Number
+class MoneyFormat {
+  constructor(val = 0) {
+    this.val = val;
+  }
+
+  get standard() {
+    return this.val.toLocaleString();
+  }
+
+  get currency() {
+    const locales = "en-NG";
+    const options = {
+      style: "currency",
+      currency: "NGN",
+      minimumFractionDigits: 2,
+    };
+    return Intl.NumberFormat(locales, options).format(this.val);
+  }
+
+  get social() {
+    const locales = "en";
+    const options = {
+      notation: "compact",
+    };
+    return Intl.NumberFormat(locales, options).format(this.val);
+  }
+}
+
+const mf = new MoneyFormat(1759);
+console.log(
+  mf.standard, // 1,759
+  mf.currency, // ₦1,759.00
+  mf.social // 1.8k
+);
 ```
