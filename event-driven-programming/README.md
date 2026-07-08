@@ -125,9 +125,9 @@ const output = `${date_f} | ${time_f}`;
 console.log(dateObj.toString(), output);
 ```
 
-## Section 1 > JavaScript Fundamentals > 1.4 Control Flows
+## Section 1 > JavaScript Fundamentals > 1.4 Control Flow
 
-### Section 1 > JavaScript Fundamentals > 1.4 Control Flows > Conditional Statements
+### Section 1 > JavaScript Fundamentals > 1.4 Control Flow > Conditional Statements
 
 #### "if, else" Statement
 
@@ -190,7 +190,7 @@ switch (input) {
 }
 ```
 
-### Section 1 > JavaScript Fundamentals > 1.4 Control Flows > Repetitive Statements
+### Section 1 > JavaScript Fundamentals > 1.4 Control Flow > Repetitive Statements
 
 #### "for" Loop
 
