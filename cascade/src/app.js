@@ -1,11 +1,11 @@
 /**
- * Event-Driven Programming Pt.2 (OPay)
+ * Cascade
  *
  * @author Northwind AI <northwindai.org>
- * @date 2026-07-08
+ * @date 2026-07-09
  */
 
-document.querySelector("#amount").addEventListener("input", handleAmountInput);
+/*document.querySelector("#amount").addEventListener("input", handleAmountInput);
 
 document.querySelector("#clear-btn").addEventListener("click", handleClearBtn);
 
@@ -105,3 +105,4 @@ function handleConfirmBtn() {
     handleClearBtn();
   }
 }
+*/
