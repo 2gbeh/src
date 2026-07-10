@@ -26,9 +26,12 @@
     />
     <meta
       property="og:image"
-      content="https://github.com/2gbeh/src/tree/main/cascade/src/images/social-preview.jpg"
+      content="https://raw.githubusercontent.com/2gbeh/src/refs/heads/main/cascade/src/images/social-preview.jpg"
     />
-    <meta property="og:url" content="https://github.com/2gbeh/src/tree/main/cascade" />
+    <meta
+      property="og:url"
+      content="https://github.com/2gbeh/src/tree/main/cascade"
+    />
     <meta property="og:type" content="website" />
     <!-- Stylesheet -->
     <link type="text/css" href="src/styles/base.css" rel="stylesheet" />
@@ -39,44 +42,75 @@
     <title>Interactive, Animated, Vanilla Pitch Deck | Cascade</title>
   </head>
   <body>
-    <header>
-      <figure>
-        <img src="src/assets/logo.png" alt="" />
-        <figcaption>Binx AI</figcaption>
-      </figure>
-    </header>
-    <main>
-      <h1>Design Session</h1>
+    <main id="root">
+      <section id="slide-section">
+        <header class="debug_">
+          <figure>
+            <img src="src/assets/logo.png" alt="" class="logo" />
+            <figcaption>Design Session</figcaption>
+          </figure>
+        </header>
+        <div class="profile-container">
+          <ul>
+            <li>
+              <figure class="profile">
+                <img src="src/images/avatar.png" alt="" class="avatar" />
+                <figcaption>
+                  <strong>Emanuel</strong>
+                  <small>AI Product Engineer, HWP Labs</small>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="hidden_">
+              <figure class="profile">
+                <img src="src/assets/avatar-1.png" alt="" class="avatar" />
+                <figcaption>
+                  <strong>Treasure Uvietobore</strong>
+                  <small>Founder/CEO, Binx AI</small>
+                </figcaption>
+              </figure>
+              <figure class="profile">
+                <img src="src/assets/avatar-2.jpg" alt="" class="avatar" />
+                <figcaption>
+                  <strong>Linda Kolapo</strong>
+                  <small>Founder/CTO, Binx AI</small>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="hidden" id="diagram-section">
+        <img src="src/images/ui-podcast.png" alt="" />
+      </section>
+    </main>
+    <footer>
       <ul>
-        <li>
-          <figure>
-            <img src="src/images/avatar.png" alt="" />
-            <figcaption>
-              <strong>Emanuel</strong>
-              <small>AI Product Engineer, HWP Labs</small>
-            </figcaption>
-          </figure>
+        <li id="slide-input-container">
+          <button title="Start">S</button>
+          <button title="Previous">P</button>
+          <select>
+            <option value="" selected disabled>Slide</option>
+          </select>
+          <button title="Next">N</button>
+          <button title="End">E</button>
         </li>
-        <li>
-          <figure>
-            <img src="src/assets/avatar-1.png" alt="" />
-            <figcaption>
-              <strong>Treasure Uvietobore</strong>
-              <small>Founder/CEO, Binx AI</small>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="src/assets/avatar-2.jpg" alt="" />
-            <figcaption>
-              <strong>Linda Kolapo</strong>
-              <small>Founder/CTO, Binx AI</small>
-            </figcaption>
-          </figure>
+        <li id="diagram-input-container">
+          <button title="Reset">X</button>
+          <select>
+            <option value="" selected disabled>Diagram</option>
+          </select>
+        </li>
+        <li id="speaker-input-container">
+          <button title="Reset">X</button>
+          <button title="Host">H</button>
+          <button title="Guest1">G1</button>
+          <button title="Guest2">G2</button>
         </li>
       </ul>
-    </main>
-
+    </footer>
     <!-- Scripts -->
+    <script type="text/javascript" src="src/data.js"></script>
     <script type="text/javascript" src="src/app.js"></script>
   </body>
 </html>

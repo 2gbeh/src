@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #fff;
+  --black: #120e0d;
+  --background: #fff;
+  --muted: #555;
+  --border: #888;
+  --brand: #6e0099;
+}
+
+body {
+  background: var(--background);
+  color: var(--black);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
