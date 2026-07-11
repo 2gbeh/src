@@ -1,0 +1,130 @@
+#top {
+  padding: 16px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("../images/seal.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    filter: grayscale(100%);
+    opacity: 0.1;
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+  }
+}
+
+#top > img {
+  width: 100px;
+}
+
+#top > hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  h1 {
+    color: var(--brand);
+    font-family: var(--font-bn);
+    font-size: 38px;
+    line-height: 40px;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    color: var(--brand-gold);
+    font-family: var(--font-body);
+    font-size: 28px;
+  }
+}
+
+#bottom {
+  background-color: var(--brand);
+  background-image: url("../images/cover.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 16px;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: end;
+  gap: 16px;
+  overflow: hidden;
+}
+
+ul.event-details {
+  font-family: var(--font-px);
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  li {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    i {
+      font-weight: 600;
+    }
+  }
+}
+
+ul.ribbon {
+  display: flex;
+
+  li {
+    flex-grow: 1;
+    height: 4px;
+
+    &:nth-child(1) {
+      background-color: var(--brand);
+    }
+    &:nth-child(2) {
+      background-color: var(--brand-yellow);
+    }
+    &:nth-child(3) {
+      background-color: var(--brand-green);
+    }
+  }
+}
+
+ul.tags {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  gap: 8px;
+
+  li {
+    color: var(--white);
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.1)
+    );
+    border: var(--glass-border);
+    border-radius: 100px;
+    padding: 4px 10px;
+    font-size: 12.5px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
+    &:last-child {
+      background-color: var(--brand-pink);
+    }
+  }
+}

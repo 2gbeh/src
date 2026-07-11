@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #fff;
+  --black: #120e0d;
+  --background: #fafafa;
+  --muted: #bbb;
+  --border: #ddd;
+  --brand: #632e5a;
+  --brand-yellow: #fff112;
+  --brand-green: #00a85a;
+  --brand-red: #c83f47;
+  --brand-gold: #9c681c;
+  --brand-pink: #e42886;
+  --brand-gradient: linear-gradient(to right, #2e2133, #4a2254);
+  --glass-background: rgba(255, 255, 255, 0.08);
+  --glass-border: 1.5px solid rgba(255, 255, 255, 0.15);
+  --debug: 1px dashed red;
+  --font-body: Calibri, "Segoe UI", Arial, sans-serif;
+  --font-heading: Cambria, Georgia, serif;
+  --font-px: "Poppins", sans-serif;
+  --font-mx: "Montserrat", sans-serif;
+  --font-rx: "Raleway", sans-serif;
+  --font-bn: "Bebas Neue", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--black);
+  min-height: 100vh;
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
