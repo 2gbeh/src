@@ -6,7 +6,7 @@ const DATA = [
       "Design, Build & Deploy Enterprise Apps with AI-Assisted Workflows",
     themeColor: "#2563eb",
     article: {
-      thumbnail: "/images/cover-git.jpg",
+      thumbnail: "./images/cover-git.jpg",
       headline: "ExpoCBT<br/>Case Study",
       description:
         "Open-source CBT WebApp. Dept. of Computer Science & Engineering, OAU",
@@ -64,7 +64,7 @@ const DATA = [
       "Explore, Train & Deploy Data Models on Cloud Jupyter Notebooks",
     themeColor: "#20beff",
     article: {
-      thumbnail: "/images/cover-lake.jpg",
+      thumbnail: "./images/cover-lake.jpg",
       headline: "Qverse<br/>Case Study",
       description:
         "Discover Web3 Apps. Community-led Projects by Bitcoin Verse Ecosystem.",

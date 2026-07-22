@@ -15,55 +15,22 @@ body {
   color: var(--black);
 }
 
-nav {
-  padding: 16px;
-  font-size: 12px;
-  display: flex;
-  gap: 16px;
-
-  a {
-    text-decoration: underline dotted;
-  }
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.content {
+main {
   color: var(--white);
   background: var(--card);
   box-shadow: var(--card-shadow);
-  width: 640px;
-  height: 640px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  width: var(--card-h);
+  height: var(--card-h);
 }
 
 .top {
   .top-content {
     /* max-width: 90%; */
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 24px;
   }
 
   figure {
-    display: flex;
-    align-items: center;
     gap: 8px;
 
     img {
@@ -106,9 +73,6 @@ nav {
     height: 38px;
     font-family: var(--font-body);
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 5px;
 
     i {
@@ -136,9 +100,6 @@ nav {
 }
 
 .bottom {
-  display: flex;
-  flex-direction: row;
-  align-items: end;
   gap: 16px;
 
   article {
@@ -151,8 +112,6 @@ nav {
 .cover {
   background-color: var(--black);
   color: var(--paper);
-  display: flex;
-  flex-direction: column;
 
   hgroup {
     padding: 16px;
@@ -172,14 +131,6 @@ nav {
     padding: 0 16px;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    position: relative;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
 }
 

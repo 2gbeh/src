@@ -6,7 +6,7 @@ figure.style.alignItems = "center";
 figure.style.gap = "12px";
 
 const img = document.createElement("img");
-img.src = "/images/icon.png";
+img.src = "../common/images/icon.png";
 img.alt = "";
 img.width = 30;
 

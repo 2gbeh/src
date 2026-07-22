@@ -1,8 +1,8 @@
 /**
- * AI/ML Accelerator | Flamingo
+ * Sumsub | Flamingo
  *
  * @author Northwind AI <northwindai.org>
- * @date 2026-07-20
+ * @date 2026-07-21
  */
 
 window.addEventListener("load", handleLoad);

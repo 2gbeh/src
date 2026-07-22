@@ -1,0 +1,79 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #edf1f2;
+  --black: #120e0d;
+  --background: #fafafa;
+  /*  */
+  --card-w: 360px;
+  --card-h: 640px;
+  --card: #edf1f2;
+  --card-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  /*  */
+  --font-display: "Raleway", Arial, sans-serif;
+  --font-heading: "Montserrat", Arial, sans-serif;
+  --font-body: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--black);
+  min-height: 100vh;
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  font-family: var(--font-body);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.debug {
+  border: 1px solid red !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.image-container {
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
