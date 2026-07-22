@@ -27,7 +27,7 @@
 #top > hgroup {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  /* gap: 4px; */
 
   h1 {
     color: var(--brand);
@@ -40,18 +40,24 @@
   h2 {
     color: var(--brand-gold);
     font-family: var(--font-body);
-    font-size: 28px;
+    font-size: 32px;
   }
 }
 
 #bottom {
-  background-color: var(--brand);
-  background-image: url("../images/cover.jpg");
-  background-blend-mode: multiply;
+  background-blend-mode: multiply; 
+  background-image: linear-gradient(
+      to bottom,
+      rgba(99, 46, 90, .9),
+      rgba(99, 46, 90, .9),
+      black
+    ),
+    url("../images/cover.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   padding: 16px;
+  padding-bottom: 10px;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -66,7 +72,7 @@ ul.event-details {
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 
   li {
     white-space: nowrap;
@@ -104,7 +110,7 @@ ul.tags {
   align-items: center;
   /* justify-content: center; */
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px;
 
   li {
     color: var(--white);
@@ -115,8 +121,8 @@ ul.tags {
     );
     border: var(--glass-border);
     border-radius: 100px;
-    padding: 4px 10px;
-    font-size: 12.5px;
+    padding: 2.5px 8px;
+    font-size: 11px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -125,6 +131,7 @@ ul.tags {
 
     &:last-child {
       background-color: var(--brand-pink);
+      font-weight: 600;
     }
   }
 }
