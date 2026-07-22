@@ -7,7 +7,7 @@
   --flamingo: #fc8eac;
   --kaggle: #20beff;
   /*  */
-  --card: linear-gradient(135deg, #000 0%, #000 100%);
+  --card: linear-gradient(135deg, #001134 0%, #003490 100%);
 }
 
 body {
@@ -110,8 +110,8 @@ main {
 }
 
 .cover {
-  background-color: var(--black);
-  color: var(--paper);
+  background-color: var(--brand);
+  color: var(--black);
 
   hgroup {
     padding: 16px;

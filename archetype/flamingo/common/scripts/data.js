@@ -4,7 +4,7 @@ const DATA = [
     subtitle: "Training Week 1/12",
     description:
       "Design, Build & Deploy Enterprise Apps with AI-Assisted Workflows",
-    themeColor: "#2563eb",
+    themeColor: "#1a237e",
     article: {
       thumbnail: "./images/cover-git.jpg",
       headline: "ExpoCBT<br/>Case Study",

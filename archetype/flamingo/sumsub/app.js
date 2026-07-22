@@ -27,10 +27,6 @@ function render(item) {
   document.querySelector("h1").innerHTML = item?.title || NA;
   document.querySelector("h2").innerHTML = item?.subtitle || NA;
   document.querySelector("p").innerHTML = item?.description || NA;
-  document.querySelector("button").style.backgroundColor =
-    item?.themeColor || "#32ffc2";
-  document.querySelector("button").style.borderColor =
-    item?.themeColor || "#32ffc2";
   document.querySelector("h3").innerHTML = item?.article?.headline || NA;
   document.querySelector(".cover p").innerHTML =
     item?.article?.description || NA;

@@ -1,14 +1,10 @@
-https://hexcolorpedia.com/color/?q=FC8EAC
+# Flamingo
 
-There isn't **one official "Flamingo" hex code**. Different design systems use different shades.
-
-Common ones are:
+> Color Palette: https://hexcolorpedia.com/color/?q=FC8EAC
 
 - **#FC8EAC** – classic **flamingo pink** (closest to the bird's pink feathers). ([Moda][1])
 - **#E1634F** – a coral/orange shade also named **Flamingo** in some color libraries. ([colorlabs.net][2])
 - **#F2552A** – another orange-red shade called **Flamingo**. ([color-name.com][3])
-
-If you mean the **actual flamingo bird's iconic pink**, use **`#FC8EAC`**.
 
 [1]: https://moda.app/resources/colors/flamingo?utm_source=chatgpt.com "What Color Is Flamingo? Hex Code & Palettes | Moda"
 [2]: https://colorlabs.net/colors/flamingo?utm_source=chatgpt.com "Flamingo Color (#E1634F) - Hex, RGB & Palettes | Color Labs"
