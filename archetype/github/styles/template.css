@@ -1,0 +1,100 @@
+:root {
+  --white: #fff;
+  --background: linear-gradient(180deg, #030543 0%, #151638 65%, #6e5fbf 100%);
+  --primary: #08872b;
+  --secondary: #17193d;
+  --kaggle: #20beff;
+  --border: #818b98;
+  --input: #272e49;
+  --input-active: #e7e7ed;
+  --placeholder: #a7aab5;
+  --glass-background: rgba(255, 255, 255, 0.08);
+  --glass-border: 1.5px solid rgba(255, 255, 255, 0.15);
+  --tab: rgb(124, 111, 195);
+  --screen: #151a22;
+  --font-body: "Mona Sans", Arial, Helvetica, sans-serif;
+  --font-logo: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: var(--white);
+}
+
+header {
+  padding: 16px 24px;
+  gap: 16px;
+}
+
+main {
+  .hero {
+    width: 720px;
+    gap: 16px;
+  }
+}
+
+footer {
+  padding: 0 56px 0 56px;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+
+  .tab {
+    color: var(--input-active);
+    background: var(--glass-background);
+    border: var(--glass-border);
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    padding-bottom: 0;
+  }
+
+  .screen {
+    background-color: var(--screen);
+    border-radius: 16px 16px 0 0;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .footer-content {
+    gap: 6em;
+
+    strong {
+      color: var(--white);
+    }
+
+    small {
+      font-size: 12px;
+    }
+
+    /* figure {
+      gap: 12px;
+
+      figcaption {
+        color: var(--white);
+        font-weight: 600;
+      }
+    }
+
+    .stack {
+      gap: 16px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+
+    .cover {
+      max-width: 320px;
+      gap: 16px;
+    }
+
+    .toc {
+      max-width: 680px;
+    }
+
+    ol {
+      gap: 16px 48px;
+    } */
+  }
+}

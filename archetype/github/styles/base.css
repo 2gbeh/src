@@ -63,7 +63,7 @@ button {
   display: none !important;
 }
 
-.image-container {
+.image-cover {
   overflow: hidden;
   position: relative;
 
@@ -74,6 +74,30 @@ button {
   }
 }
 
-.flex-1 {
-  flex: 1 1 0%;
+.avatar-group {
+  display: flex;
+
+  img {
+    border: 2px solid whitesmoke;
+    border-radius: 40px;
+    margin-left: -8px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.indicator {
+  background-color: green;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }

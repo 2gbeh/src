@@ -1,6 +1,18 @@
 .flex-1 {
   flex: 1 1 0%;
 }
+
+/* FLEX ROW */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-csa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
 .flex-cb {
   display: flex;
   flex-direction: row;
@@ -29,6 +41,13 @@
   flex-direction: row;
   align-items: end;
 }
+.flex-xb {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* FLEX COLUMN */
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -45,6 +64,21 @@
   justify-content: space-between;
 }
 
+/* GRID */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* TEXT */
 .text-8 {
   font-size: 8px;
 }

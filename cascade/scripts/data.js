@@ -24,32 +24,32 @@ const SPEAKER = {
   },
   guests: [
     {
-      avatar: "src/assets/avatar-1.png",
-      display_name: "Treasure Uvietobore",
+      avatar: "src/assets/avatar-nolaide.jpg",
+      display_name: "Naheem Olaide",
       title: "Founder/CEO, Binx AI",
     },
     {
-      avatar: "src/assets/avatar-2.jpg",
-      display_name: "Linda Kolapo",
-      title: "Founder/CTO, Binx AI",
+      avatar: "src/assets/avatar-tuvietobore.jpg",
+      display_name: "Treasure Uvietobore",
+      title: "Technical Rep, Binx AI",
     },
   ],
 };
 
 const DIAGRAM = {
-  website: "src/images/ui-website.png",
-  podcast: "src/images/ui-podcast.png",
+  website: "./images/ui-website.png",
+  podcast: "./images/ui-podcast.png",
   //
-  website_home: "src/assets/ui-home.png",
-  website_features: "src/assets/ui-features.png",
-  website_pricing: "src/assets/ui-pricing.png",
+  website_home: "./uploads/ui-home.png",
+  website_features: "./uploads/ui-features.png",
+  website_pricing: "./uploads/ui-pricing.png",
   //
-  relationship: "",
+  relationship: "./uploads/relationship.png",
   childhood: "",
-  education: "",
-  career: "",
+  education: "./uploads/education.jpg",
+  career: "./uploads/career.jpg",
   platform: "",
-  tech_stack: "",
-  data_model: "",
+  tech_stack: "./uploads/tech-stack.png",
+  data_model: "./uploads/data-model.png",
   hobbies: "",
 };
