@@ -9,7 +9,7 @@ Toc.ol.style.gap = "16px 48px";
 
 Toc.li = (Context.data?.topics || []).map((item) => {
   const strong = document.createElement("strong");
-  strong.textContent = item.bonus ? `BONUS : ` : `Week ${item.page} : `;
+  strong.textContent = item.bonus ? `BONUS: ` : `Week ${item.page}: `;
 
   const small = document.createElement("small");
   small.textContent = item.topic;

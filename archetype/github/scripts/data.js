@@ -7,13 +7,19 @@ const DATA = [
       "Design, Build & Deploy Enterprise Apps with AI-Assisted Workflows",
     themeColor: "#1a237e", // expo-cbt
     article: {
-      thumbnail: "./images/cover-git.jpg",
-      headline: "ExpoCBT Case Study",
+      logos: ["logo-oau.png", "logo-expo.png"],
+      headline: "ExpoCBT",
       description:
-        "Open-source CBT WebApp. Dept. of Computer Science & Engineering, OAU",
+        "Open-source CBT WebApp | Dept. of Computer Science & Engineering, OAU",
       keywords:
         "typescript python csharp postgres clause-ai open-source build-in-public",
       framework: "Software Development Life Cycle (SDLC)",
+      techStack: [
+        "TypeScript-7.x-3178C6.svg",
+        "Python-3.x-3776AB.svg",
+        // "CSharp-10.x-239120.svg",
+        "postgres-18.4-316192.svg",
+      ],
     },
     chapters: [
       { chapter: "Scope Definition", subChapters: false },
@@ -76,13 +82,19 @@ const DATA = [
       "Analyze, Train & Deploy Data Models on Cloud Jupyter Notebooks",
     themeColor: "#20beff", // kaggle
     article: {
-      thumbnail: "./images/cover-lake.jpg",
-      headline: "Qverse Case Study",
+      logos: ["logo-bitcoin.png", "logo-verse.png", "logo-qverse.png"],
+      headline: "Qverse",
       description:
-        "Discover Web3 Apps. Community-led Projects by Bitcoin Verse Ecosystem.",
+        "Discover Web3 Apps | Community-led Projects Developed by Bitcoin Verse Ecosystem",
       keywords:
         "python numpy scikit-learn joblib clause-ai open-source build-in-public",
       framework: "Cross-Industry Standard Process for Data Mining (CRISP-DM)",
+      techStack: [
+        "Python-3.x-3776AB.svg",
+        // "Matplotlib-3.x-ffffff.svg",
+        "scikit--learn-1.9-F7931E.svg",
+        "TensorFlow-2.x-FF6F00.svg",
+      ],
     },
     chapters: [
       { chapter: "Scope Definition", subChapters: false },

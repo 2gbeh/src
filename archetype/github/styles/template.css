@@ -64,37 +64,5 @@ footer {
     small {
       font-size: 12px;
     }
-
-    /* figure {
-      gap: 12px;
-
-      figcaption {
-        color: var(--white);
-        font-weight: 600;
-      }
-    }
-
-    .stack {
-      gap: 16px;
-
-      img {
-        width: 24px;
-        height: 24px;
-      }
-    }
-
-
-    .cover {
-      max-width: 320px;
-      gap: 16px;
-    }
-
-    .toc {
-      max-width: 680px;
-    }
-
-    ol {
-      gap: 16px 48px;
-    } */
   }
 }

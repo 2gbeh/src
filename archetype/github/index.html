@@ -51,24 +51,14 @@
       </footer>
     </div>
     <!-- Scripts -->
-    <script>
-      const queryParam = new URLSearchParams(window.location.search).get("q");
-      const index = Number(queryParam || 0);
-      const Context = {
-        index,
-        data: DATA[index] || {},
-      };
-
-      const Header = document.querySelector("header");
-      const Hero = document.querySelector(".hero");
-      const FooterContent = document.querySelector(".footer-content");
-    </script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
     <script type="text/javascript" src="./scripts/logo.js"></script>
     <script type="text/javascript" src="./scripts/nav.js"></script>
     <script type="text/javascript" src="./scripts/user.js"></script>
     <script type="text/javascript" src="./scripts/hero-content.js"></script>
     <script type="text/javascript" src="./scripts/form.js"></script>
     <script type="text/javascript" src="./scripts/window-ctrl.js"></script>
+    <script type="text/javascript" src="./scripts/cover.js"></script>
     <script type="text/javascript" src="./scripts/toc.js"></script>
   </body>
 </html>

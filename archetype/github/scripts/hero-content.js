@@ -1,4 +1,6 @@
-const HeroContent = {};
+const HeroContent = {
+  tags: ["@2gbeh", "#build-in-public"],
+};
 
 HeroContent.h1 = document.createElement("h1");
 HeroContent.h1.classList.add("text-6xl");
@@ -28,7 +30,7 @@ HeroContent.u.style.textDecoration = "underline dashed";
 HeroContent.u.style.textUnderlineOffset = "4px";
 HeroContent.u.textContent = "TikTok Live Q&A Session on Fridays at 10AM WAT";
 
-HeroContent.a = ["@2gbeh", "#build-in-public"].map((item) => {
+HeroContent.a = HeroContent.tags.map((item) => {
   const a = document.createElement("a");
   a.style.color = "var(--kaggle)";
   a.textContent = item;
