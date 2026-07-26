@@ -1,0 +1,158 @@
+:root {
+  --white: #fff;
+  --black: #202124;
+  --background: #fff;
+
+  --primary: #20beff;
+  --muted: #5f6368;
+  --border: #bdc1c6;
+  --input: #272e49;
+  --input-active: #e7e7ed;
+  --placeholder: #a7aab5;
+
+  --font-heading: "Archivo", Arial, Helvetica, sans-serif;
+  --font-body: "Inter", Arial, Helvetica, sans-serif;
+}
+
+header {
+  margin: 0 auto;
+  padding: 16px 0;
+  width: 1280px;
+  gap: 16px;
+}
+
+nav {
+  a {
+    color: var(--muted);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+}
+
+main {
+  margin: 0 auto;
+  width: 1280px;
+}
+
+.hero {
+  padding-left: 24px;
+  gap: 16px;
+
+  h1 {
+    font-family: var(--font-heading);
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 52px;
+    width: 580px;
+  }
+
+  p {
+    color: var(--muted);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    width: 580px;
+  }
+
+  form {
+    margin-top: 16px;
+    gap: 16px;
+
+    button {
+      background-color: transparent;
+      border-radius: 100px;
+      padding: 0 20px;
+      height: 44px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      display: flex;
+      gap: 6px;
+
+      i {
+        margin: 4px 0 0 0;
+      }
+    }
+
+    .btn-pri {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-sec {
+      border: 1px solid var(--border);
+    }
+  }
+}
+
+footer {
+  padding: 16px;
+  border-top: 1px solid var(--border);
+
+  .footer-content {
+    margin: 0 auto;
+    padding: 0 24px;
+    width: 1280px;
+  }
+
+  p,
+  small,
+  strong {
+    font-size: 14px;
+  }
+
+  p,
+  small {
+    color: var(--muted);
+  }
+}
+
+.avatar-group {
+  display: flex;
+
+  img {
+    border: 2px solid #bbb;
+  }
+}
+
+/* main {
+  .hero {
+    width: 640px;
+  }
+}
+
+footer {
+  padding: 0 56px 0 56px;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+
+  .tab {
+    color: var(--input-active);
+    background: var(--glass-background);
+    border: var(--glass-border);
+    border-radius: 20px 20px 0 0;
+    padding: 20px;
+    padding-bottom: 0;
+  }
+
+  .screen {
+    background-color: var(--screen);
+    border-radius: 16px 16px 0 0;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .footer-content {
+    gap: 6em;
+
+    strong {
+      color: var(--white);
+    }
+
+    small {
+      font-size: 12px;
+    }
+  }
+} */

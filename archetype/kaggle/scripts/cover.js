@@ -24,13 +24,13 @@ Cover.avatarGroup.append(...Cover.avatars);
 
 Cover.figcaption = document.createElement("figcaption");
 Cover.figcaption.classList.add("text-2xl");
-Cover.figcaption.style.color = "var(--white)";
 Cover.figcaption.style.fontWeight = 600;
 Cover.figcaption.textContent = Context?.data?.article?.headline;
 
 Cover.figure.append(Cover.avatarGroup, Cover.figcaption);
 
 Cover.caseStudy = document.createElement("p");
+Cover.caseStudy.style.color = "var(--muted)";
 Cover.caseStudy.textContent = Context?.data?.article?.description;
 
 Cover.strong = document.createElement("strong");

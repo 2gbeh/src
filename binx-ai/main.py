@@ -1,6 +1,17 @@
-```py
-class BinxUser(ABC):
+#!/usr/bin/env python3
+"""
+Binx AI User DTO
 
+Author: Northwind AI <northwindai.org>
+Date: 2026-07-26
+"""
+
+from abc import ABC, abstractmethod
+from datetime import datetime
+from enum import Enum
+from .utils import PlanTier, MemorySnapshot
+
+class UserDto(ABC):
     id: str
     phone_number: str
     display_name: str
@@ -13,7 +24,7 @@ class BinxUser(ABC):
     is_blocked: bool
     last_active_at: datetime
     created_at: datetime
-    updated_at: datetime
+    updated_at: datetime    
 
     @abstractmethod
     def deduct_credits(self, amount: float) -> None:
@@ -42,4 +53,5 @@ class BinxUser(ABC):
     @abstractmethod
     def can_send_message(self) -> bool:
         pass
-```
+    
+    
