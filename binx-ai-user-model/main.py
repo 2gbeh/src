@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Binx AI User DTO
+Binx AI User Model
 
 Author: Northwind AI <northwindai.org>
 Date: 2026-07-26

@@ -1,0 +1,96 @@
+.content-l {
+  color: var(--white);
+  background-color: var(--black);
+  font-family: var(--font-sans);
+}
+
+.cover {
+  color: var(--muted);
+  background-color: var(--blackish);
+  border-right: 10px solid var(--white);
+  border-bottom: 10px solid var(--white);
+  padding: 16px;
+  width: 230px;
+  height: 320px;
+  letter-spacing: 0.25px;
+  rotate: -2deg;
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
+    font-size: 8px;
+
+    small {
+      color: var(--primary);
+      font-size: 8.5px;
+    }
+  }
+
+  .hero {
+    gap: 4px;
+    position: relative;
+
+    h1 {
+      color: var(--border);
+      font-family: var(--font-heading);
+      font-size: 64px;
+      font-weight: normal;
+      letter-spacing: -4px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    h3 {
+      margin-top: 24px;
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: normal;
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0px;
+    }
+
+    p {
+      margin-top: 2px;
+      font-family: var(--font-body);
+      font-size: 10px;
+      line-height: 12px;
+      width: 155px;
+    }
+  }
+
+  footer {
+    color: var(--white);
+    padding-top: 4px;
+    font-size: 8px;
+    line-height: 10px;
+    gap: 16px;
+
+    figure {
+      gap: 6px;
+
+      img {
+        border: 1px solid wheat;
+        border-radius: 24px;
+        width: 24px;
+      }
+
+      .indicator {
+        width: 8px;
+        height: 8px;
+        bottom: 2px;
+      }
+
+      figcaption {
+        font-size: 10px;
+      }
+    }
+  }
+}

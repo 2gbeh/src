@@ -1,0 +1,20 @@
+/* :root {
+  --primary: #fc8eac;
+  --border-thead: #b03a5c;
+  --border-tbody: #e85c82;
+}
+
+html[data-theme="dark"] {
+  --primary: #20beff;
+  --border-thead: #006a94;
+  --border-tbody: #00afef;
+} */
+
+section {
+  padding: 24px;
+}
+
+.container {
+  width: 640px;
+  height: 640px;
+}

@@ -14,7 +14,7 @@ WindowCtrl.controls.forEach((item) => {
   const li = document.createElement("li");
   li.title = item.title;
   li.style.backgroundColor = item.color;
-  li.style.borderRadius = "16px";
+  li.style.borderRadius = "12px";
   li.style.width = "12px";
   li.style.height = "12px";
 

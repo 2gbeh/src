@@ -1,0 +1,152 @@
+.relative {
+  position: relative;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+/* FLEX ROW */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-csa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.flex-cb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-cc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flex-ce {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+.flex-cx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-eb {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+}
+.flex-ec {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+}
+.flex-ex {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+.flex-xb {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* FLEX COLUMN */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-col-cc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flex-col-ex {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.flex-col-xc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flex-col-xb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* GRID */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* TEXT */
+.text-8 {
+  font-size: 8px;
+}
+.text-10 {
+  font-size: 10px;
+}
+.text-xs {
+  font-size: 12px;
+}
+.text-sm {
+  font-size: 14px;
+}
+.text-base {
+  font-size: 16px;
+}
+.text-lg {
+  font-size: 18px;
+}
+.text-xl {
+  font-size: 20px;
+}
+.text-2xl {
+  font-size: 24px;
+}
+.text-3xl {
+  font-size: 30px;
+}
+.text-4xl {
+  font-size: 36px;
+}
+.text-5xl {
+  font-size: 48px;
+}
+.text-6xl {
+  font-size: 60px;
+}
+.text-7xl {
+  font-size: 72px;
+}
+.text-8xl {
+  font-size: 96px;
+}
+.text-9xl {
+  font-size: 128px;
+}

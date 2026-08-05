@@ -18,7 +18,7 @@ const DATA = [
         "TypeScript-7.x-3178C6.svg",
         "Python-3.x-3776AB.svg",
         // "CSharp-10.x-239120.svg",
-        "postgres-18.4-316192.svg",
+        "Postgres-18.4-316192.svg",
       ],
     },
     chapters: [
@@ -92,7 +92,7 @@ const DATA = [
       techStack: [
         "Python-3.x-3776AB.svg",
         // "Matplotlib-3.x-ffffff.svg",
-        "scikit--learn-1.9-F7931E.svg",
+        "Scikit--learn-1.9-F7931E.svg",
         "TensorFlow-2.x-FF6F00.svg",
       ],
     },
