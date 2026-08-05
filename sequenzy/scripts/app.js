@@ -1,3 +1,10 @@
+/**
+ * Sequenzy
+ *
+ * @author Northwind AI <northwindai.org>
+ * @date 2026-08-01
+ */
+
 const queryParam = new URLSearchParams(window.location.search).get("q");
 const Item = DATA[queryParam || 0];
 

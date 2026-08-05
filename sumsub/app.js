@@ -1,5 +1,5 @@
 /**
- * Sumsub | Flamingo
+ * Sumsub
  *
  * @author Northwind AI <northwindai.org>
  * @date 2026-07-21
