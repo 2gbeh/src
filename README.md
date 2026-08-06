@@ -16,3 +16,4 @@
 |  12 | Jul 22, 2026 | [archetype](./archetype/)                                                       | ![JavaScript](https://img.shields.io/badge/JavaScript-ES2017-F7DF1E.svg)                                                        |
 |  13 | Jul 26, 2026 | [binx-ai-user-model](./binx-ai-user-model/)                                     | ![JavaScript](https://img.shields.io/badge/JavaScript-ES2017-F7DF1E.svg)                                                        |
 |  14 | Aug 1, 2026  | [sequenzy](./sequenzy/)                                                         | ![JavaScript](https://img.shields.io/badge/JavaScript-ES2017-F7DF1E.svg)                                                        |
+|  14 | Aug 6, 2026  | [lru-cache](./lru-cache/)                                                       | ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-007ACC.svg)                                                           |

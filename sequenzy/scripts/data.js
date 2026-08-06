@@ -75,13 +75,13 @@ const DATA = [
       {
         page: "12",
         topic:
-          "CI/CD, DevOps, Cloud Deployment<br/>- Vercel, Docker, &nbsp;Azure App Services",
+          "CI/CD, DevOps, Cloud Deployment<br/>- Vercel, Docker, Azure App Services",
       },
       {
         page: "x",
         bonus: true,
         topic:
-          "Software Maintenance,&nbsp;Agile Workflows - GitHub Projects (Kanban)",
+          "Software Maintenance, Agile Workflows - GitHub Projects (Kanban)",
       },
     ],
   },
@@ -158,13 +158,13 @@ const DATA = [
       {
         page: "8",
         topic:
-          "Deploy ML Model - Kaggle,&nbsp;Joblib",
+          "Deploy ML Model - Joblib, Kaggle",
       },
       {
         page: "x",
         bonus: true,
         topic:
-          "Deploy Data Pipeline & Web Service<br/>- Power BI, Django,&nbsp; Azure ML",
+          "Deploy Data Pipeline & Web Service<br/>- Power BI, Django, Azure ML",
       },
     ],
   },
